@@ -27,10 +27,11 @@ class SimpleReport:
 
     # empresa com maio número de produtos
     def company_bigger_stock(self, list_products):
-        company_bigger_stock = max(
-            Counter(product["nome_da_empresa"] for product in list_products)
+        company_bigger_stock = Counter(
+            product["nome_da_empresa"] for product in list_products
         )
-        return company_bigger_stock
+
+        return company_bigger_stock.most_common(1)[0][0]
 
     @classmethod
     def generate(self, list_products):
