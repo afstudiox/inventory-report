@@ -2,7 +2,7 @@ from collections import Counter
 from datetime import datetime
 
 
-class SimpleReport():
+class SimpleReport:
     def __init__(self, list_products):
         self.list_products = list_products
 
@@ -41,5 +41,5 @@ class SimpleReport():
         return (
             f"Data de fabricação mais antiga: {oldest}\n"
             f"Data de validade mais próxima: {closest}\n"
-            f"Empresa com mais produtos: {company}\n"
+            f"Empresa com mais produtos: {company}"
         )
